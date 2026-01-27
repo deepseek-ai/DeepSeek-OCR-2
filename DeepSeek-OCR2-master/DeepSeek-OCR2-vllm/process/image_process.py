@@ -146,7 +146,7 @@ class DeepseekOCR2Processor(ProcessorMixin):
 
         self.tokenizer = tokenizer
         # self.tokenizer = add_special_token(tokenizer)
-        self.tokenizer.padding_side = 'left'  # must set this，padding side with make a difference in batch inference
+        self.tokenizer.padding_side = 'left'  # must set this, padding side will make a difference in batch inference
 
         # add the pad_token as special token to use 'tokenizer.pad_token' and 'tokenizer.pad_token_id'
         if self.tokenizer.pad_token is None:
@@ -448,7 +448,7 @@ class DeepseekOCR2Processor(ProcessorMixin):
             images_seq_mask = images_seq_mask + [False]
 
         assert len(tokenized_str) == len(
-            images_seq_mask), f"tokenize_with_images func: tokenized_str's length {len(tokenized_str)} is not equal to imags_seq_mask's length {len(images_seq_mask)}"
+            images_seq_mask), f"tokenize_with_images func: tokenized_str's length {len(tokenized_str)} is not equal to images_seq_mask's length {len(images_seq_mask)}"
         
 
 
@@ -461,7 +461,7 @@ class DeepseekOCR2Processor(ProcessorMixin):
 
         assert len(tokenized_str) == len(images_seq_mask) == len(masked_tokenized_str), \
             (f"tokenized_str's length {len(tokenized_str)}, input_ids' length {len(masked_tokenized_str)}, "
-             f"imags_seq_mask's length {len(images_seq_mask)}, are not equal")
+             f"images_seq_mask's length {len(images_seq_mask)}, are not equal")
 
         input_ids = torch.LongTensor(tokenized_str)
         target_ids = torch.LongTensor(masked_tokenized_str)
