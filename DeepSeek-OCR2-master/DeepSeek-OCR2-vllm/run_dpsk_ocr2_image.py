@@ -252,6 +252,7 @@ if __name__ == "__main__":
         if 'line_type' in outputs:
             import matplotlib.pyplot as plt
             from matplotlib.patches import Circle
+            # WARNING: outputs is free-form model text; eval(outputs) can crash if it's not a valid dict.
             lines = eval(outputs)['Line']['line']
 
             line_type = eval(outputs)['Line']['line_type']
