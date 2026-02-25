@@ -207,9 +207,9 @@ def draw_bounding_boxes(image, refs, jdx):
                                     fill=(255, 255, 255, 30))
                         
                         draw.text((text_x, text_y), label_type, font=font, fill=color)
-                    except:
+                    except Exception:
                         pass
-        except:
+        except Exception:
             continue
     img_draw.paste(overlay, (0, 0), overlay)
     return img_draw

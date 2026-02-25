@@ -38,7 +38,7 @@ def load_image(image_path):
         print(f"error: {e}")
         try:
             return Image.open(image_path)
-        except:
+        except Exception:
             return None
 
 
@@ -128,9 +128,9 @@ def draw_bounding_boxes(image, refs):
                                     fill=(255, 255, 255, 30))
                         
                         draw.text((text_x, text_y), label_type, font=font, fill=color)
-                    except:
+                    except Exception:
                         pass
-        except:
+        except Exception:
             continue
     img_draw.paste(overlay, (0, 0), overlay)
     return img_draw
@@ -275,7 +275,7 @@ if __name__ == "__main__":
 
                     ax.scatter(p0[0], p0[1], s=5, color = 'k')
                     ax.scatter(p1[0], p1[1], s=5, color = 'k')
-                except:
+                except Exception:
                     pass
 
             for endpoint in endpoints:
@@ -294,7 +294,7 @@ if __name__ == "__main__":
                         center = eval(center.split(': ')[1])
                         circle = Circle(center, radius=r, fill=False, edgecolor='black', linewidth=0.8)
                         ax.add_patch(circle)
-            except:
+            except Exception:
                 pass
 
 
