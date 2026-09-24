@@ -40,7 +40,7 @@
 
 <h2>
 <p align="center">
-  <a href="">DeepSeek-OCR 2: Visual Causal Flow</a>
+  <a href="https://arxiv.org/abs/2601.20552">DeepSeek-OCR 2: Visual Causal Flow</a>
 </p>
 </h2>
 
@@ -48,7 +48,7 @@
 <img src="assets/fig1.png" style="width: 600px" align=center>
 </p>
 <p align="center">
-<a href="">Explore more human-like visual encoding.</a>       
+<a href="https://arxiv.org/abs/2601.20552">Explore more human-like visual encoding.</a>       
 </p>
 
 
