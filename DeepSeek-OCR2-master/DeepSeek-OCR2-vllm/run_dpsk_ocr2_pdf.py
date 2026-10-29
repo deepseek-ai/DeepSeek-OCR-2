@@ -1,3 +1,4 @@
+import ast
 import os
 import fitz
 import img2pdf
@@ -140,7 +141,7 @@ def extract_coordinates_and_label(ref_text, image_width, image_height):
 
     try:
         label_type = ref_text[1]
-        cor_list = eval(ref_text[2])
+        cor_list = ast.literal_eval(ref_text[2])
     except Exception as e:
         print(e)
         return None
